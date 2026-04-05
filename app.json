@@ -1,29 +1,47 @@
 {
   "expo": {
-    "name": "HotelMess",
+    "name": "HostelMess",
     "slug": "HotelMess",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
-    "splash": {
-      "image": "./assets/splash-icon.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
+    "plugins": [
+      "expo-system-ui",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff",
+          "dark": {
+            "backgroundColor": "#ffffff",
+            "image": "./assets/splash-icon.png"
+          },
+          "imageWidth": 180
+        }
+      ]
+    ],
     "ios": {
       "supportsTablet": true
     },
     "android": {
+      "backgroundColor": "#ffffff",
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.hiper_3d.hostelmess"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "558aba74-402d-4f1e-94c9-d1d270ecb73b"
+      }
     }
   }
 }
